@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 export default function LoginButton() {
     return (
-      <Link 
+      <a 
         href="/api/auth/login?returnTo=/dashboard"
         className="relative overflow-hidden bg-teal-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-teal-300 inline-flex items-center justify-center group"
       >
@@ -37,6 +35,6 @@ export default function LoginButton() {
                  style={{clipPath: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"}} />
           </div>
         </div>
-      </Link>
+      </a>
     );
   }
