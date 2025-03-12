@@ -37,7 +37,8 @@ Displays key statistics for the current Charlotte Hornets roster, including:
 Displays statistics for an All Time Charlotte Hornets roster, including:
 - Height
 - Weight
-Unfortunately, due to the limitations of the free version of BallDontLie API, only these physical statistics were relevant. Game statistics are not tied to the player, and even teams are not connected to the player. 
+
+Unfortunately, due to the limitations of the free version of BallDontLie API, only these physical statistics were relevant. Once all Hornets players are retrieved from the API, there is no way to determine which of those are the current players, nor was there a way to separate the players by season. The player's game statistics are also locked behind a paywall, so at the very least I decided to list some physical attributes to demonstrate pulling data from an API. 
 
 
 Dashboard Widgets
@@ -60,7 +61,7 @@ All Time Player Stats: A leaderboard showing the tallest and heaviest Hornets pl
 
 `npm install`
 
-Create a .env.local file in the root directory and add the following Auth0 credentials:
+Create a .env.local file in the root directory (replace with legitimate credentials):
 
 `AUTH0_SECRET=your-auth0-secret
 AUTH0_BASE_URL=http://localhost:3000
