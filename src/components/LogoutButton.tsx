@@ -1,9 +1,10 @@
 export default function LogoutButton() {
     return (
-      <a 
+    // eslint-disable-next-line @next/next/no-html-link-for-pages
+    <a 
         href="/api/auth/logout?returnTo=/" 
         className="relative overflow-hidden bg-teal-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-teal-300 inline-flex items-center justify-center group"
-      >
+    >
         <div className="relative z-10 flex items-center justify-center gap-2">
           {/* Stylized basketball icon */}
           <svg 
