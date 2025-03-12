@@ -30,17 +30,6 @@ export default withPageAuthRequired(
         .sort((a, b) => Number(b.weight) - Number(a.weight))
         .slice(0, 5);
 
-        // Get top 5 heaviest players
-        const top5ShortestPlayers = [...hornetsPlayersApi]
-        .sort((a, b) => parseHeight(a.height) - parseHeight(b.height))
-        .slice(0, 5);
-    
-        // Get top 5 lightest players
-        const top5LightestPlayers = [...hornetsPlayersApi]
-          .sort((a, b) => Number(a.weight) - Number(b.weight))
-          .slice(0, 5);
-
-
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold">BuzzCenter</h1>
