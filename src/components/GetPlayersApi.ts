@@ -4,8 +4,34 @@ import { getEnvVariable } from '../../lib/env';
 const apiKey = getEnvVariable('BALLDONTLIE_API_KEY');
 const api = new BalldontlieAPI({ apiKey });
 
+interface Team {
+  id: number;
+  conference: string;
+  division: string;
+  city: string;
+  name: string;
+  full_name: string;
+  abbreviation: string;
+}
+
+interface Player {
+  id: number;
+  first_name: string;
+  last_name: string;
+  position: string;
+  height: string;
+  weight: string;
+  jersey_number: string;
+  college: string;
+  country: string;
+  draft_year: number;
+  draft_round: number;
+  draft_number: number;
+  team: Team;
+}
+
 export async function getPlayersByTeamId(teamId: number) {
-  let allPlayers: any[] = [];
+  let allPlayers: Player[] = [];
   let cursor: number | undefined = undefined;
   let hasMore = true;
 

@@ -148,7 +148,7 @@ export default function PerformanceRadarChart({ players }: PerformanceRadarChart
         
         <div className="mt-4">
           <h3 className="text-lg font-medium text-center text-gray-800">
-            {selectedPlayer.name}'s Performance Profile
+            {selectedPlayer.name}&apos;s Performance Profile
           </h3>
           <div className="grid grid-cols-3 gap-2 mt-2">
             {statCategories.map((category) => {
