@@ -1,4 +1,4 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+// import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import LogoutButton from '../../components/LogoutButton';
 import hornetsPlayers from '../../components/mockData';
 import ScrollableCards from '../../components/ScrollableCards';
@@ -8,7 +8,7 @@ import PerformanceRadarChart from '../../components/RadarChart';
 import PointsDistributionChart from '../../components/PointsDistributionChart';
 import { getPlayersByTeamId } from '../../components/GetPlayersApi';
 
-export default withPageAuthRequired(
+export default
   async function Dashboard() {
 
     const hornetsPlayersApi = await getPlayersByTeamId(4);
@@ -119,6 +119,5 @@ export default withPageAuthRequired(
         
         </div>
     );
-  },
-  { returnTo: '/dashboard' }
-);
+  }
+//   { returnTo: '/dashboard' };
